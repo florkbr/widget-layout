@@ -17,6 +17,7 @@ import {
   Variants,
   getDashboardTemplates,
   getDefaultTemplate,
+  getWidgetIdentifier,
   mapPartialExtendedTemplateConfigToPartialTemplateConfig,
   mapTemplateConfigToExtendedTemplateConfig,
   patchDashboardTemplate,
@@ -87,7 +88,7 @@ const GridLayout = ({ isLayoutLocked = false }: { isLayoutLocked?: boolean }) =>
         maxH: widgetMaxHeight[data],
         minH: widgetMinHeight[data],
         widgetType: data,
-        i: `${data}#${Date.now() + Math.random()}`,
+        i: getWidgetIdentifier(data),
         title: 'New title',
       };
       setCurrentDropInItem(undefined);

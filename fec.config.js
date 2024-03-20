@@ -1,4 +1,5 @@
 const path = require('path');
+const widgetConfig = require('./fec.widget.config');
 
 module.exports = {
   appUrl: ['/staging/starter'],
@@ -33,6 +34,7 @@ module.exports = {
     exclude: ['react-router-dom', 'jotai'],
     shared: [
       {
+        ...widgetConfig.shared,
         'react-router-dom': { singleton: true, requiredVersion: '*' },
         jotai: { singleton: true, requiredVersion: '*' },
       },

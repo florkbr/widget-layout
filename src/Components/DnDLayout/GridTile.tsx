@@ -45,7 +45,7 @@ export type GridTileProps = React.PropsWithChildren<{
 const GridTile = ({ widgetType, title, isDragging, setIsDragging, setWidgetAttribute, widgetConfig, removeWidget }: GridTileProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const Component = widgetMapper[widgetType] || Fragment;
+  const component = widgetMapper[widgetType] || Fragment;
 
   const dropdownItems = useMemo(() => {
     const isMaximized = widgetConfig.h === widgetConfig.maxH;
@@ -165,9 +165,7 @@ const GridTile = ({ widgetType, title, isDragging, setIsDragging, setWidgetAttri
         </Flex>
       </CardHeader>
       <Divider />
-      <CardBody className="pf-v5-u-p-0">
-        <Component></Component>
-      </CardBody>
+      <CardBody className="pf-v5-u-p-0">{component}</CardBody>
     </Card>
   );
 };
