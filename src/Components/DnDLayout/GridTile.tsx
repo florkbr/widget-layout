@@ -21,7 +21,7 @@ import {
 import { CompressIcon, EllipsisVIcon, ExpandIcon, GripVerticalIcon, LockIcon, MinusCircleIcon, UnlockIcon } from '@patternfly/react-icons';
 import React, { useMemo, useState } from 'react';
 import clsx from 'clsx';
-import useChrome from '@redhat-cloud-services/frontend-components/useChrome';
+import useChrome from '@ausuliv/frontend-components/useChrome';
 
 import './GridTile.scss';
 import { Layout } from 'react-grid-layout';
@@ -166,7 +166,7 @@ const GridTile = ({ widgetType, isDragging, setIsDragging, setWidgetAttribute, w
             dragging: isDragging,
           })}
         >
-          <GripVerticalIcon style={{ fill: 'var(--pf-v5-global--Color--200)' }} />
+          <GripVerticalIcon style={{ fill: 'var(--pf-t--temp--dev--tbd)' /* CODEMODS: original v5 color was --pf-v5-global--Color--200 */ }} />
         </Icon>
       </Tooltip>
     </>

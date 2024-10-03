@@ -3,12 +3,10 @@ import './Header.scss';
 import {
   Button,
   ButtonVariant,
+  Content,
   Flex,
   FlexItem,
   PageSection,
-  PageSectionVariants,
-  Text,
-  TextContent,
   Toolbar,
   ToolbarContent,
   ToolbarGroup,
@@ -82,15 +80,15 @@ const Header = () => {
   const { currentUser } = useCurrentUser();
   const userName = currentUser?.first_name && currentUser?.last_name ? ` ${currentUser.first_name} ${currentUser.last_name}` : currentUser?.username;
   return (
-    <PageSection className="widg-c-page__main-section--header pf-v5-u-p-lg pf-v5-u-p-r-0-on-sm" variant={PageSectionVariants.light}>
+    <PageSection hasBodyWrapper={false} className="widg-c-page__main-section--header pf-v5-u-p-lg pf-v5-u-p-r-0-on-sm">
       <Flex className="widg-l-flex--header" direction={{ default: 'column', lg: 'row' }}>
         <FlexItem alignSelf={{ default: 'alignSelfFlexStart' }}>
-          <TextContent>
-            <Text component="h1">Hi{userName ? `, ${userName}` : '!'}</Text>
-            <Text component="h2" className="pf-v5-u-mt-0">
+          <Content>
+            <Content component="h1">Hi{userName ? `, ${userName}` : '!'}</Content>
+            <Content component="h2" className="pf-v5-u-mt-0">
               Welcome to your Hybrid Cloud Console.
-            </Text>
-          </TextContent>
+            </Content>
+          </Content>
         </FlexItem>
         <FlexItem align={{ default: 'alignLeft', lg: 'alignRight' }}>
           <Toolbar>

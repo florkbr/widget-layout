@@ -2,6 +2,15 @@
 
 Reusable drag and drop UI layout for frontends
 
+## PF6 migration todos
+
+/Users/bflorkie/Development/github/RedHatInsights/widget-layout/src/Components/DnDLayout/GridTile.tsx
+    1:1   warning  We now recommend passing any icon to the `icon` prop instead of passing it as children, such as for plain, icon only toggles. Passing an icon as children will result in incorrect styling                                   @patternfly/pf-codemods/menuToggle-warn-iconOnly-toggle
+    8:3   warning  The default value of appendTo on Dropdown has been updated to `document.body`                                                                                                                                                @patternfly/pf-codemods/popper-update-appendTo-default
+  122:13  warning  The `screenReaderText` prop on HelperTextItem has been updated, and will now render only when the `variant` prop has a value other than "default". Previously the prop was rendered only when the `isDynamic` prop was true  @patternfly/pf-codemods/helperTextItem-warn-screenReaderText-update
+
+✖ 3 problems (0 errors, 3 warnings)
+
 ## Initial etc/hosts setup
 
 In order to access the https://[env].foo.redhat.com in your browser, you have to add entries to your `/etc/hosts` file. This is a **one-time** setup that has to be done only once (unless you modify hosts) on each machine.

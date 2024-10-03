@@ -1,4 +1,4 @@
-import { PortalNotificationConfig } from '@redhat-cloud-services/frontend-components-notifications/Portal';
+import { PortalNotificationConfig } from '@ausuliv/frontend-components-notifications/Portal';
 import { atom, useSetAtom } from 'jotai';
 
 export const notificationsAtom = atom(<PortalNotificationConfig[]>[]);

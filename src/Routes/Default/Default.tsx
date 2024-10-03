@@ -10,8 +10,8 @@ import useCurrentUser from '../../hooks/useCurrentUser';
 import { LayoutTypes, WidgetPermission, getWidgetMapping } from '../../api/dashboard-templates';
 import { widgetMappingAtom } from '../../state/widgetMappingAtom';
 import '../../App.scss';
-import Portal from '@redhat-cloud-services/frontend-components-notifications/Portal';
-import useChrome from '@redhat-cloud-services/frontend-components/useChrome';
+import Portal from '@ausuliv/frontend-components-notifications/Portal';
+import useChrome from '@ausuliv/frontend-components/useChrome';
 
 const DefaultRoute = (props: { layoutType?: LayoutTypes }) => {
   const isLayoutLocked = useAtomValue(lockedLayoutAtom);
@@ -71,7 +71,7 @@ const DefaultRoute = (props: { layoutType?: LayoutTypes }) => {
       <Portal notifications={notifications} removeNotification={removeNotification} />
       <Header />
       <AddWidgetDrawer dismissible={false}>
-        <PageSection className="widg-c-page__main-section--grid pf-v5-u-p-md-on-sm">
+        <PageSection hasBodyWrapper={false} className="widg-c-page__main-section--grid pf-v5-u-p-md-on-sm">
           <GridLayout isLayoutLocked={isLayoutLocked} {...props} />
         </PageSection>
       </AddWidgetDrawer>

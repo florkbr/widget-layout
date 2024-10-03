@@ -21,10 +21,10 @@
     "static": "BETA=true PROXY=true fec static"
   },
   "dependencies": {
-    "@patternfly/react-component-groups": "^5.3.0-prerelease.1",
-    "@patternfly/react-core": "^5.3.3",
-    "@redhat-cloud-services/frontend-components": "^4.2.11",
-    "@redhat-cloud-services/frontend-components-notifications": "^4.1.0",
+    "@patternfly/react-component-groups": "6.0.0-alpha.12",
+    "@patternfly/react-core": "6.0.0-alpha.100",
+    "@ausuliv/frontend-components": "^4.2.11",
+    "@ausuliv/frontend-components-notifications": "^4.1.5",
     "awesome-debounce-promise": "^2.1.0",
     "classnames": "^2.5.1",
     "jotai": "^2.8.4",
@@ -41,7 +41,7 @@
     "@babel/preset-react": "7.24.7",
     "@babel/preset-typescript": "^7.24.7",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.15",
-    "@redhat-cloud-services/eslint-config-redhat-cloud-services": "^2.0.4",
+    "@ausuliv/eslint-config-redhat-cloud-services": "^2.0.4",
     "@redhat-cloud-services/frontend-components-config": "^6.0.18",
     "@redhat-cloud-services/tsc-transform-imports": "^1.0.12",
     "@testing-library/jest-dom": "^5.17.0",
@@ -68,5 +68,8 @@
   },
   "insights": {
     "appname": "widget-layout"
+  },
+  "overrides": {
+    "@patternfly/react-tokens": "6.0.0-alpha.34"
   }
 }

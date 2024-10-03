@@ -1,5 +1,5 @@
 module.exports = {
-  extends: '@redhat-cloud-services/eslint-config-redhat-cloud-services',
+  extends: '@ausuliv/eslint-config-redhat-cloud-services',
   globals: {
     insights: 'readonly',
     shallow: 'readonly',
