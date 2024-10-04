@@ -1,5 +1,6 @@
 const path = require('path');
 const dependencies = require('./package.json').dependencies;
+const devDependencies = require('./package.json').devDependencies;
 
 module.exports = {
   appUrl: ['/staging/widget-layout'],
@@ -36,6 +37,7 @@ module.exports = {
     shared: [
       {
         'react-router-dom': { singleton: true, version: dependencies['react-router-dom'], requiredVersion: '*' },
+        '@scalprum/react-core':  { version: devDependencies['@scalprum/react-core'], requiredVersion: '*', singleton: true },
       },
     ],
   },
