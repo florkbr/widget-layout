@@ -56,8 +56,8 @@ const LayoutEmptyState = () => {
   }, []);
 
   return (
-    <PageSection hasBodyWrapper={false} className="empty-layout pf-v5-u-p-0">
-      <EmptyState headingLevel="h2" icon={PlusCircleIcon} titleText="No dashboard content" variant={EmptyStateVariant.lg} className="pf-v5-u-p-sm">
+    <PageSection hasBodyWrapper={false} className="empty-layout pf-v6-u-p-0">
+      <EmptyState headingLevel="h2" icon={PlusCircleIcon} titleText="No dashboard content" variant={EmptyStateVariant.lg} className="pf-v6-u-p-sm">
         <EmptyStateBody>
           You don’t have any widgets on your dashboard. To populate your dashboard, drag <GripVerticalIcon /> items from the blue widget bank to this
           dashboard body here.
